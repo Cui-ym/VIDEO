@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "VIDHomeViewController.h"
+#import "VIDUserViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -16,6 +19,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    VIDHomeViewController *homeView = [[VIDHomeViewController alloc] init];
+    VIDUserViewController *userView = [[VIDUserViewController alloc] init];
+    UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:homeView];
+    UINavigationController *userNav = [[UINavigationController alloc] initWithRootViewController:userView];
+    
+    NSArray *array = [NSArray arrayWithObjects:@"教学大厅", @"我的信息", nil];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.edgesForExtendedLayout = UIRectEdgeNone;
+    tabBarController.viewControllers = [NSArray arrayWithObjects:homeNav, userNav, nil];
+    int i = 0;
+    for (UITabBarItem *item in tabBarController.tabBar.items) {
+        item.title = array[i++];
+    }
+    
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }
