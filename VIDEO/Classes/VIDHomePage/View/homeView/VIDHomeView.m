@@ -32,12 +32,12 @@
         [self addSubview:_homeView];
         self.viewFlowLayout = [[UICollectionViewFlowLayout alloc] init];
         _viewFlowLayout.itemSize = CGSizeMake((kWidth - 20) / 2 - 20, (kWidth - 20) / 2 - 20);
-        _viewFlowLayout.minimumLineSpacing = 20;
-        _viewFlowLayout.minimumInteritemSpacing = 20;
-        _viewFlowLayout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20);
+        _viewFlowLayout.minimumLineSpacing = 0;
+        _viewFlowLayout.minimumInteritemSpacing = 10;
+        _viewFlowLayout.sectionInset = UIEdgeInsetsMake(20, 20, 10, 20);
         _viewFlowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
         
-        self.videoCollectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:_viewFlowLayout];
+        self.videoCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight - 108) collectionViewLayout:_viewFlowLayout];
         [self.videoCollectionView registerClass:[VIDHomeViewCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
         self.videoCollectionView.backgroundColor = [UIColor whiteColor];
         self.videoCollectionView.delegate = self;
@@ -58,6 +58,7 @@
     VIDHomeViewCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.timeLabel.text = @"03:33";
     cell.titleLabel.text = @"广播体操";
+    
     return cell;
 }
 
@@ -66,7 +67,12 @@
 }
 
 #pragma mark - collectionViewDelegate
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"playVideo");
+    if ([self.delegate respondsToSelector:@selector(videoPlay)]) {
+        [_delegate videoPlay];
+    }
+}
 
 
 

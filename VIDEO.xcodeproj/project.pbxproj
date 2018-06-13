@@ -97,7 +97,11 @@
 		582F420320CD251300F82FF4 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F41B120CD251300F82FF4 /* JSONHTTPClient.m */; };
 		582F420420CD251300F82FF4 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F41B220CD251300F82FF4 /* JSONAPI.m */; };
 		582F420520CD251300F82FF4 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F41B620CD251300F82FF4 /* JSONModel+networking.m */; };
-		582F420920CD2E6400F82FF4 /* wwdc.png in Resources */ = {isa = PBXBuildFile; fileRef = 582F420820CD2E6400F82FF4 /* wwdc.png */; };
+		582F420D20CD4F1D00F82FF4 /* wwdc.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 582F420C20CD4F1D00F82FF4 /* wwdc.jpeg */; };
+		582F421020CFF36700F82FF4 /* VIDVideoPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F420F20CFF36700F82FF4 /* VIDVideoPlayViewController.m */; };
+		582F421820CFF83300F82FF4 /* VIDVideoPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F421720CFF83300F82FF4 /* VIDVideoPlayView.m */; };
+		582F421C20CFFFE900F82FF4 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 582F421B20CFFFE800F82FF4 /* cancel.png */; };
+		583B9FA120D16A50007AEA1D /* exchange.png in Resources */ = {isa = PBXBuildFile; fileRef = 583B9FA020D16A50007AEA1D /* exchange.png */; };
 		58F2E1CF20C97B2B00491925 /* VIDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F2E1CE20C97B2B00491925 /* VIDHomeViewController.m */; };
 		58F2E1D220C97B4C00491925 /* VIDHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F2E1D120C97B4C00491925 /* VIDHomeView.m */; };
 /* End PBXBuildFile section */
@@ -307,7 +311,14 @@
 		582F41B420CD251300F82FF4 /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
 		582F41B520CD251300F82FF4 /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
 		582F41B620CD251300F82FF4 /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
-		582F420820CD2E6400F82FF4 /* wwdc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wwdc.png; sourceTree = "<group>"; };
+		582F420C20CD4F1D00F82FF4 /* wwdc.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wwdc.jpeg; sourceTree = "<group>"; };
+		582F420E20CFF36700F82FF4 /* VIDVideoPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIDVideoPlayViewController.h; sourceTree = "<group>"; };
+		582F420F20CFF36700F82FF4 /* VIDVideoPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIDVideoPlayViewController.m; sourceTree = "<group>"; };
+		582F421220CFF3BD00F82FF4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		582F421620CFF83300F82FF4 /* VIDVideoPlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIDVideoPlayView.h; sourceTree = "<group>"; };
+		582F421720CFF83300F82FF4 /* VIDVideoPlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIDVideoPlayView.m; sourceTree = "<group>"; };
+		582F421B20CFFFE800F82FF4 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		583B9FA020D16A50007AEA1D /* exchange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exchange.png; sourceTree = "<group>"; };
 		58F2E1CD20C97B2B00491925 /* VIDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIDHomeViewController.h; sourceTree = "<group>"; };
 		58F2E1CE20C97B2B00491925 /* VIDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VIDHomeViewController.m; sourceTree = "<group>"; };
 		58F2E1D020C97B4C00491925 /* VIDHomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VIDHomeView.h; sourceTree = "<group>"; };
@@ -343,11 +354,15 @@
 		5805875C20BC363000E5EE73 = {
 			isa = PBXGroup;
 			children = (
-				582F420820CD2E6400F82FF4 /* wwdc.png */,
+				582F420C20CD4F1D00F82FF4 /* wwdc.jpeg */,
+				582F421B20CFFFE800F82FF4 /* cancel.png */,
+				583B9FA020D16A50007AEA1D /* exchange.png */,
+				582F410220CD251200F82FF4 /* ThirdParty */,
 				5805876720BC363000E5EE73 /* VIDEO */,
 				5805878020BC363000E5EE73 /* VIDEOTests */,
 				5805878B20BC363000E5EE73 /* VIDEOUITests */,
 				5805876620BC363000E5EE73 /* Products */,
+				582F421120CFF3BD00F82FF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -364,18 +379,9 @@
 		5805876720BC363000E5EE73 /* VIDEO */ = {
 			isa = PBXGroup;
 			children = (
-				5805876820BC363000E5EE73 /* AppDelegate.h */,
-				5805876920BC363000E5EE73 /* AppDelegate.m */,
-				582F410220CD251200F82FF4 /* ThirdParty */,
-				58F2E1C920C97B1300491925 /* VIDHomePage */,
-				582F40F520CCD21900F82FF4 /* VIDUserPage */,
-				5805876B20BC363000E5EE73 /* ViewController.h */,
-				5805876C20BC363000E5EE73 /* ViewController.m */,
-				5805876E20BC363000E5EE73 /* Main.storyboard */,
-				5805877120BC363000E5EE73 /* Assets.xcassets */,
-				5805877320BC363000E5EE73 /* LaunchScreen.storyboard */,
+				582F421920CFF97D00F82FF4 /* Classes */,
+				582F421A20CFF9A300F82FF4 /* VIDEO */,
 				5805877620BC363000E5EE73 /* Info.plist */,
-				5805877720BC363000E5EE73 /* main.m */,
 			);
 			path = VIDEO;
 			sourceTree = "<group>";
@@ -406,7 +412,7 @@
 				582F40F820CCD21900F82FF4 /* View */,
 			);
 			name = VIDUserPage;
-			path = VIDEO/VIDUserPage;
+			path = VIDEO/Classes/VIDUserPage;
 			sourceTree = SOURCE_ROOT;
 		};
 		582F40F620CCD21900F82FF4 /* Controller */ = {
@@ -726,6 +732,59 @@
 			path = JSONModelNetworking;
 			sourceTree = "<group>";
 		};
+		582F421120CFF3BD00F82FF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				582F421220CFF3BD00F82FF4 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		582F421420CFF7E300F82FF4 /* homeView */ = {
+			isa = PBXGroup;
+			children = (
+				58F2E1D020C97B4C00491925 /* VIDHomeView.h */,
+				58F2E1D120C97B4C00491925 /* VIDHomeView.m */,
+				582F40FF20CD240200F82FF4 /* VIDHomeViewCollectionViewCell.h */,
+				582F410020CD240200F82FF4 /* VIDHomeViewCollectionViewCell.m */,
+			);
+			path = homeView;
+			sourceTree = "<group>";
+		};
+		582F421520CFF7FE00F82FF4 /* videoView */ = {
+			isa = PBXGroup;
+			children = (
+				582F421620CFF83300F82FF4 /* VIDVideoPlayView.h */,
+				582F421720CFF83300F82FF4 /* VIDVideoPlayView.m */,
+			);
+			path = videoView;
+			sourceTree = "<group>";
+		};
+		582F421920CFF97D00F82FF4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				58F2E1C920C97B1300491925 /* VIDHomePage */,
+				582F40F520CCD21900F82FF4 /* VIDUserPage */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		582F421A20CFF9A300F82FF4 /* VIDEO */ = {
+			isa = PBXGroup;
+			children = (
+				5805876920BC363000E5EE73 /* AppDelegate.m */,
+				5805876820BC363000E5EE73 /* AppDelegate.h */,
+				5805876B20BC363000E5EE73 /* ViewController.h */,
+				5805876C20BC363000E5EE73 /* ViewController.m */,
+				5805876E20BC363000E5EE73 /* Main.storyboard */,
+				5805877120BC363000E5EE73 /* Assets.xcassets */,
+				5805877320BC363000E5EE73 /* LaunchScreen.storyboard */,
+				5805877720BC363000E5EE73 /* main.m */,
+			);
+			name = VIDEO;
+			path = VIDEO/VIDEO;
+			sourceTree = SOURCE_ROOT;
+		};
 		58F2E1C920C97B1300491925 /* VIDHomePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -741,6 +800,8 @@
 			children = (
 				58F2E1CD20C97B2B00491925 /* VIDHomeViewController.h */,
 				58F2E1CE20C97B2B00491925 /* VIDHomeViewController.m */,
+				582F420E20CFF36700F82FF4 /* VIDVideoPlayViewController.h */,
+				582F420F20CFF36700F82FF4 /* VIDVideoPlayViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -755,10 +816,8 @@
 		58F2E1CC20C97B1300491925 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				58F2E1D020C97B4C00491925 /* VIDHomeView.h */,
-				58F2E1D120C97B4C00491925 /* VIDHomeView.m */,
-				582F40FF20CD240200F82FF4 /* VIDHomeViewCollectionViewCell.h */,
-				582F410020CD240200F82FF4 /* VIDHomeViewCollectionViewCell.m */,
+				582F421420CFF7E300F82FF4 /* homeView */,
+				582F421520CFF7FE00F82FF4 /* videoView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -869,12 +928,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				582F420920CD2E6400F82FF4 /* wwdc.png in Resources */,
+				583B9FA120D16A50007AEA1D /* exchange.png in Resources */,
+				582F420D20CD4F1D00F82FF4 /* wwdc.jpeg in Resources */,
 				582F41EB20CD251300F82FF4 /* LICENSE in Resources */,
 				5805877520BC363000E5EE73 /* LaunchScreen.storyboard in Resources */,
 				5805877220BC363000E5EE73 /* Assets.xcassets in Resources */,
 				582F41EC20CD251300F82FF4 /* README.md in Resources */,
 				582F41DB20CD251300F82FF4 /* README.md in Resources */,
+				582F421C20CFFFE900F82FF4 /* cancel.png in Resources */,
 				582F41DA20CD251300F82FF4 /* LICENSE in Resources */,
 				5805877020BC363000E5EE73 /* Main.storyboard in Resources */,
 			);
@@ -926,6 +987,7 @@
 				582F41F420CD251300F82FF4 /* SDWebImagePrefetcher.m in Sources */,
 				582F41C820CD251300F82FF4 /* YYTextLine.m in Sources */,
 				582F41EE20CD251300F82FF4 /* SDWebImageDecoder.m in Sources */,
+				582F421020CFF36700F82FF4 /* VIDVideoPlayViewController.m in Sources */,
 				582F41D420CD251300F82FF4 /* NSAttributedString+YYText.m in Sources */,
 				582F41EF20CD251300F82FF4 /* UIImageView+HighlightedWebCache.m in Sources */,
 				582F41D720CD251300F82FF4 /* UIView+YYText.m in Sources */,
@@ -972,6 +1034,7 @@
 				582F41F220CD251300F82FF4 /* UIImage+MultiFormat.m in Sources */,
 				582F41B920CD251300F82FF4 /* ViewController+MASAdditions.m in Sources */,
 				582F41E720CD251300F82FF4 /* AFURLSessionManager.m in Sources */,
+				582F421820CFF83300F82FF4 /* VIDVideoPlayView.m in Sources */,
 				582F40FB20CCD24300F82FF4 /* VIDUserViewController.m in Sources */,
 				582F41D020CD251300F82FF4 /* YYTextArchiver.m in Sources */,
 				582F41C320CD251300F82FF4 /* YYTextMagnifier.m in Sources */,
@@ -1148,6 +1211,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24VRK7V967;
 				INFOPLIST_FILE = VIDEO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1155,7 +1219,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Imac.VIDEO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1166,6 +1230,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24VRK7V967;
 				INFOPLIST_FILE = VIDEO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1173,7 +1238,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Imac.VIDEO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

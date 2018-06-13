@@ -32,18 +32,21 @@
     [super layoutSubviews];
     [self.coverImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.and.top.right.equalTo(self.contentView);
-        make.height.equalTo(self.contentView.mas_height).multipliedBy(0.75);
+        make.height.equalTo(self.contentView.mas_height).multipliedBy(0.7);
     }];
-    [self.coverImageView setImage:[UIImage imageNamed:@"wwdc.png"]];
     self.coverImageView.backgroundColor = [UIColor yellowColor];
-    self.coverImageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.coverImageView setImage:[UIImage imageNamed:@"wwdc.jpeg"]];
+    self.coverImageView.contentMode = UIViewContentModeScaleToFill;
     
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.contentView).offset(-5);
         make.bottom.equalTo(self.coverImageView).offset(-5);
-        make.height.and.width.equalTo(self.coverImageView).multipliedBy(0.3);
+//        make.height.and.width.equalTo(self.coverImageView).multipliedBy(0.3);
+        make.width.mas_equalTo(45);
+        make.height.mas_equalTo(20);
     }];
-    self.timeLabel.layer.borderWidth = 2;
+    self.timeLabel.layer.borderWidth = 1;
+    self.timeLabel.layer.cornerRadius = 5;
     self.timeLabel.layer.masksToBounds = YES;
     self.timeLabel.textColor = [UIColor blackColor];
     self.timeLabel.font = [UIFont systemFontOfSize:15];

@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol VIDHomeViewDelegate <NSObject>
+
+// 视频教学
+- (void)videoPlay;
+
+@end
+
 @interface VIDHomeView : UIView
+
+@property (nonatomic, weak) id<VIDHomeViewDelegate> delegate;
+
+@property (nonatomic, strong) UIView *view;
 
 @end
